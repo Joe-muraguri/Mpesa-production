@@ -37,10 +37,10 @@ def simulate_c2b_transaction():
         "Authorization": "Bearer %s" % access_token}
 
     request = {
-        "ShortCode": keys.shortcode,
+        "ShortCode": 600977,
         "CommandID": "CustomerPayBillOnline",
         "amount": "1",
-        "MSISDN": keys.test_MSISDN,
+        "Msisdn": 254708374149,
         "BillRefNumber": "123",
     }
 
