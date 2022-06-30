@@ -37,7 +37,7 @@ def simulate_c2b_transaction():
         "Authorization": "Bearer %s" % access_token}
 
     request = {
-        "ShortCode": keys.shortCode,
+        "ShortCode": keys.shortcode,
         "CommandID": "CustomerPayBillOnline",
         "amount": "1",
         "MSISDN": keys.test_MSISDN,
@@ -47,7 +47,7 @@ def simulate_c2b_transaction():
     # response = requests.request("POST", 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate', headers=headers, data=)
     # print(response.text.encode('utf8'))
 
-    response = requests.post(api_url, headers=headers, json=request)
+    response = requests.post(api_url, headers=headers, data=request)
     print(response.text.encode('utf8'))
 
 
